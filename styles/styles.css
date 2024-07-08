@@ -1,0 +1,247 @@
+/* Global body styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #00bcd4, #3f51b5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /* Background animation */
+    animation: backgroundAnimation 10s ease infinite;
+    background-image: url('../assets/bg.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Background animation keyframes */
+@keyframes backgroundAnimation {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Container styles */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    /* Entry animation */
+    animation: slideIn 1s ease forwards;
+    opacity: 0;
+    transform: translateY(-20px);
+    margin-bottom: 20px;
+}
+
+/* Container entry animation keyframes */
+@keyframes slideIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Heading styles */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    /* Entry animation */
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+}
+
+/* Heading entry animation keyframes */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Warning message styles */
+.warning {
+    color: #f44336;
+    font-size: 16px;
+    margin-bottom: 20px;
+    /* Blink animation */
+    animation: blink 1s infinite;
+}
+
+/* Blink animation keyframes */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Entry animation */
+    animation: fadeIn 1.5s ease forwards;
+    opacity: 0;
+}
+
+/* Input container styles */
+.input-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+/* Input icon styles */
+.input-container i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #757575;
+}
+
+/* Input field styles */
+.input-container input[type="text"] {
+    padding: 12px 15px 12px 40px;
+    border: 2px solid #bdbdbd;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input field focus styles */
+input[type="text"]:focus {
+    border-color: #03a9f4;
+    box-shadow: 0 0 8px rgba(3, 169, 244, 0.5);
+    outline: none;
+}
+
+/* Error message styles */
+.error-message {
+    display: none;
+    color: #f44336;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Invalid input styles */
+.input-container.invalid .error-message {
+    display: block;
+}
+
+.input-container.invalid input[type="text"] {
+    border-color: #f44336;
+}
+
+/* Shake animation keyframes */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
+}
+
+/* Shake animation class */
+.input-container.shake-animation {
+    animation: shake 0.5s ease;
+}
+
+/* Button styles */
+button {
+    background: linear-gradient(135deg, #1178cd, #0dddec);
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    font-size: 16px;
+    margin-top: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+    /* Entry animation */
+    animation: fadeInUp 2s ease forwards;
+    opacity: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Button icon styles */
+button i {
+    margin-right: 10px;
+}
+
+/* Button hover styles */
+button:hover {
+    background: linear-gradient(135deg, rgb(18, 60, 198), #0dddec);
+    transform: translateY(-2px);
+}
+
+/* Optional: Media query for small screens */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+    input[type="text"],
+    button {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+/* Footer styles */
+.footer {
+    position: fixed;
+    bottom: 10px; /* Adjust as needed */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+    box-sizing: border-box;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.footer-left {
+    display: flex;
+    align-items: r;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    
+}
+
+.footer-text {
+    font-size: 14px;
+    color: #ffffff;
+    white-space: nowrap; /* Prevent text wrap */
+}
+
+.footer-text a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-text a:hover {
+    color: #ffffff;
+}

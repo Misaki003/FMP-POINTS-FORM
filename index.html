@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMP POINTS SYSTEM</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/icon.png">
+
+    <!-- External CSS styles -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <!-- SweetAlert2 for toast notifications -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!-- Custom JavaScript file -->
+    <script src="script/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Form title and warning -->
+        <h1><i class="fa-brands fa-discord"></i> Enter Discord User ID</h1> <!-- Title with Discord icon -->
+        <p class="warning"><i class="fa-solid fa-triangle-exclamation"></i> Please make sure to enter the correct ID or you will have to wait for an hour !!</p> <!-- Warning message with exclamation icon -->
+        <!-- Discord User ID form -->
+        <form id="discordForm" action="#">
+            <div class="input-container">
+                <i class="fa-solid fa-user"></i> <!-- Icon for input field -->
+                <input type="text" id="userId" name="userId" placeholder="Enter your Discord User ID" maxlength="18">
+            </div>
+            <span class="error-message">Discord ID should be 18 digits !!</span> <!-- Error message for invalid input -->
+            <button type="submit"><i class="fa-solid fa-paper-plane"></i> Submit</button> <!-- Submit button with paper plane icon -->
+        </form>
+    </div>
+    
+    <!-- Footer section -->
+    <div class="footer">
+        <div class="footer-left">
+            <i class="fa-brands fa-discord"></i> <!-- Discord icon -->
+            <span class="footer-text">with 💗 by Misaki ⋆౨ৎ˚⟡˖ ࣪</span> <!-- Footer text -->
+        </div>
+        <div class="footer-right">
+            <span class="footer-text">FMP</span> <!-- Footer text -->
+            <a href="https://discord.com/invite/qtgkjGhcar" target="_blank"><i class="fa-brands fa-discord"></i></a> <!-- Discord icon with link -->
+        </div>
+    </div>
+</body>
+</html>
